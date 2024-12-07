@@ -13,4 +13,5 @@ WORKDIR /app/prf-project/client/prf
 RUN npm ci
 RUN npm run build
 EXPOSE 4200
-CMD ["pm2-runtime", "start", "http-server", "--name", "'angular-app'", "--", "-p", "4200", "-d", "false", "./dist/my-first-project/browser"]
+CMD ["ng", "serve", "--host", "172.100.0.20"]
+# CMD ["pm2-runtime", "start", "http-server", "--name", "'angular-app'", "--", "-p", "4200", "-d", "false", "./dist/my-first-project/browser"]
