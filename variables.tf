@@ -29,3 +29,17 @@ variable "db_port" {
   default     = 27017
 }
 
+variable "graylog_password_secret" {
+  description = "Graylog password secret"
+  type        = string
+  sensitive   = true
+  default     = "aB3cD4eF5GhIjK6LmN7OpQ8rStUvWxYz"
+}
+
+variable "graylog_root_password_sha2" {
+  description = "Graylog root jelszó SHA-256 hash-e"
+  type        = string
+  sensitive   = true
+  default     = "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd37b5eeb2badd8a0ad"
+}
+
